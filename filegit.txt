@@ -1,0 +1,2316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<meta name="description"
+      content="Discover and compare AI, marketing, SEO and website tools with FaroHub.">
+
+<meta name="theme-color" content="#E9E8F8">
+
+<title>FaroHub | Discover Better. Choose Smarter.</title>
+
+<style>
+
+/* =========================================
+   FAROHUB V3.0 — PREMIUM DESIGN SYSTEM
+========================================= */
+
+:root {
+    color-scheme: light;
+
+    --blue: #8DB9F0;
+    --lavender: #E9E8F8;
+    --peach: #F5B69E;
+
+    --bg: #E9E8F8;
+    --panel: #ffffff;
+    --text: #192C49;
+    --muted: #52647e;
+    --accent: #315b8b;
+    --line: #c8cfe4;
+    --soft: #e4efff;
+    --shadow: 0 12px 35px #192c490d;
+}
+
+body.dark {
+    color-scheme: dark;
+
+    --bg: #192C49;
+    --panel: #233955;
+    --text: #f8fafc;
+    --muted: #c4d2e6;
+    --accent: #8DB9F0;
+    --line: #455c79;
+    --soft: #304a6d;
+    --shadow: 0 12px 35px #0002;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 system-ui, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.wrap {
+    width: min(1220px, calc(100% - 40px));
+    margin: auto;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   HEADER & LOGO
+========================================= */
+
+header {
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 29px;
+    font-weight: 850;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+}
+
+.logo strong {
+    color: var(--accent);
+}
+
+.mark {
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+}
+
+.mark svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 650;
+    color: var(--muted);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.outline {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu {
+    display: none;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 45px;
+    align-items: center;
+
+    padding: 75px 20px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            ellipse at 85% 40%,
+            #8DB9F066,
+            transparent 65%
+        ),
+        radial-gradient(
+            ellipse at 10% 10%,
+            #F5B69E44,
+            transparent 50%
+        );
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(40px, 6vw, 76px);
+    line-height: 1.08;
+    letter-spacing: -.055em;
+    margin: 20px 0;
+}
+
+h1 span {
+    color: var(--accent);
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    background: var(--blue);
+    color: #192C49;
+    padding: 13px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 750;
+    transition: background .2s;
+}
+
+.btn:hover {
+    background: var(--peach);
+}
+
+.btn-peach {
+    background: var(--peach);
+    color: #192C49;
+}
+
+.btn-peach:hover {
+    background: var(--blue);
+}
+
+.visual {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 26px;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.visual h2 {
+    font-size: 23px;
+}
+
+.mini {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    margin-top: 12px;
+}
+
+.mini small {
+    color: var(--muted);
+}
+
+.glyph {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    background: var(--blue);
+    color: #192C49;
+    border-radius: 13px;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+/* =========================================
+   TRUST BAR
+========================================= */
+
+.principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section {
+    margin: 65px 0;
+    scroll-margin-top: 100px;
+}
+
+h2 {
+    font-size: clamp(27px, 4vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -.035em;
+    margin: 12px 0;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* =========================================
+   SEARCH & CATEGORY FILTER
+========================================= */
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 240px auto;
+    gap: 12px;
+    margin: 25px 0 10px;
+}
+
+input,
+select {
+    width: 100%;
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* =========================================
+   PREMIUM PRODUCT CARDS
+========================================= */
+
+.product {
+    display: flex;
+    flex-direction: column;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 23px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: transform .2s, border-color .2s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.product-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.product-logo {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    font-weight: 850;
+    flex-shrink: 0;
+}
+
+.systeme {
+    background: #e2efff;
+    color: #245db0;
+}
+
+.hostinger {
+    background: #ede8ff;
+    color: #673de6;
+}
+
+.semrush {
+    background: #fff0e6;
+    color: #b94b12;
+}
+
+.product h3 {
+    font-size: 23px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.product-head small {
+    color: var(--muted);
+}
+
+.tag {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--soft);
+    color: var(--accent);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 750;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.product p {
+    color: var(--muted);
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 20px;
+}
+
+.features li {
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.features li::before {
+    content: '✓';
+    font-weight: 800;
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+.pricing {
+    background: var(--soft);
+    padding: 13px;
+    border-radius: 12px;
+    margin-top: auto;
+}
+
+.pricing strong {
+    display: block;
+    font-size: 18px;
+}
+
+.pricing a {
+    font-size: 13px;
+    color: var(--accent);
+}
+
+.product-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.product details {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+}
+
+summary {
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: 750;
+}
+
+details ul {
+    padding-left: 20px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   COMPARISON TABLE
+========================================= */
+
+.table-wrap {
+    overflow-x: auto;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    background: var(--blue);
+    color: #192C49;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+/* =========================================
+   EDUCATIONAL GUIDES
+========================================= */
+
+.guide {
+    background: var(--panel);
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.guide h3 {
+    line-height: 1.3;
+    font-size: 21px;
+}
+
+.guide p {
+    color: var(--muted);
+}
+
+/* =========================================
+   ABOUT & LEGAL
+========================================= */
+
+.callout {
+    padding: clamp(25px, 5vw, 48px);
+    border-radius: 25px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--peach);
+}
+
+.legal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.legal h2 {
+    font-size: 24px;
+}
+
+.legal p {
+    color: var(--muted);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: var(--panel);
+    border-top: 1px solid var(--line);
+    padding: 35px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.foot a {
+    text-decoration: none;
+}
+
+.sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 0;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu {
+        display: inline-block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .wrap {
+        width: calc(100% - 28px);
+    }
+
+    .grid,
+    .controls,
+    .legal,
+    .principles {
+        grid-template-columns: 1fr;
+    }
+
+    .principles {
+        text-align: left;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .mark {
+        width: 43px;
+        height: 43px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    section {
+        margin: 45px 0;
+    }
+
+    .product {
+        padding: 20px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+
+    .product:hover {
+        transform: none;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body id="home">
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="wrap nav">
+
+        <a class="logo"
+           href="#home"
+           aria-label="FaroHub home">
+
+            <span class="mark" aria-hidden="true">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 90 90"
+                     focusable="false">
+
+                    <defs>
+
+                        <linearGradient id="fhLogo"
+                                        x2="1" y2="1">
+
+                            <stop stop-color="#8DB9F0"/>
+
+                            <stop offset="1"
+                                  stop-color="#E9E8F8"/>
+
+                        </linearGradient>
+
+                    </defs>
+
+                    <rect width="90"
+                          height="90"
+                          rx="23"
+                          fill="url(#fhLogo)"/>
+
+                    <path
+                        d="M20 70V26H46
+                           M20 46H40
+                           M49 70V34
+                           M70 26V70
+                           M49 52H70"
+                        fill="none"
+                        stroke="#192C49"
+                        stroke-width="7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                    <circle cx="70"
+                            cy="14"
+                            r="5"
+                            fill="#F5B69E"/>
+
+                </svg>
+
+            </span>
+
+            <span>Faro<strong>Hub</strong></span>
+
+        </a>
+
+        <nav id="navigation"
+             aria-label="Main navigation">
+
+            <a href="#home">Home</a>
+
+            <a href="#products">Software</a>
+
+            <a href="#comparison">Compare</a>
+
+            <a href="#guides">Guides</a>
+
+            <a href="#about">About</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="outline"
+                    id="theme"
+                    type="button"
+                    aria-label="Switch to dark mode">
+
+                ☾ Dark
+
+            </button>
+
+            <button class="outline menu"
+                    id="menu"
+                    type="button"
+                    aria-controls="navigation"
+                    aria-expanded="false">
+
+                Menu
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="wrap">
+
+    <!-- HERO SECTION -->
+
+    <div class="hero">
+
+        <div>
+
+            <div class="eyebrow">
+
+                YOUR DIGITAL BUSINESS PARTNER
+
+            </div>
+
+            <h1>
+
+                Discover better tools.
+
+                <span>Build a smarter future.</span>
+
+            </h1>
+
+            <p class="lead">
+
+                Explore software, compare features
+                and discover practical digital solutions
+                for entrepreneurs, creators and
+                growing businesses.
+
+            </p>
+
+            <div class="actions">
+
+                <a class="btn" href="#products">
+
+                    Explore Software →
+
+                </a>
+
+                <a class="btn btn-peach"
+                   href="#comparison">
+
+                    Compare Tools
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="visual">
+
+            <div class="eyebrow">
+
+                DISCOVER. COMPARE. GROW.
+
+            </div>
+
+            <h2>Find your next business tool.</h2>
+
+            <div class="mini">
+
+                <span class="glyph">✦</span>
+
+                <div>
+
+                    <b>AI &amp; Automation</b>
+
+                    <br>
+
+                    <small>Work smarter every day</small>
+
+                </div>
+
+            </div>
+
+            <div class="mini">
+
+                <span class="glyph"
+                      style="background:#F5B69E">↗</span>
+
+                <div>
+
+                    <b>Digital Marketing</b>
+
+                    <br>
+
+                    <small>Grow your online business</small>
+
+                </div>
+
+            </div>
+
+            <div class="mini">
+
+                <span class="glyph">▣</span>
+
+                <div>
+
+                    <b>Website Solutions</b>
+
+                    <br>
+
+                    <small>Build your digital presence</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TRUST BAR -->
+
+    <div class="principles">
+
+        <div>✓ Transparent recommendations</div>
+
+        <div>✓ Practical software comparisons</div>
+
+        <div>✓ Budget-conscious choices</div>
+
+    </div>
+
+
+    <!-- =====================================
+         SOFTWARE DIRECTORY
+    ====================================== -->
+
+    <section id="products">
+
+        <div class="eyebrow">
+
+            SOFTWARE DIRECTORY
+
+        </div>
+
+        <h2>Explore Featured Software</h2>
+
+        <p class="muted">
+
+            Discover tools that match your business
+            goals and budget.
+
+        </p>
+
+        <p class="muted">
+
+            These are research-based product overviews,
+            not hands-on reviews. Links are currently
+            non-affiliate links.
+
+        </p>
+
+
+        <!-- SEARCH & FILTER -->
+
+        <div class="controls">
+
+            <div>
+
+                <label class="sr" for="search">
+
+                    Search software
+
+                </label>
+
+                
+
+<input
+    id="search"
+    type="search"
+    name="farohub_software_search"
+    placeholder="Search software..."
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+>
+
+            </div>
+
+            <div>
+
+                <label class="sr" for="category">
+
+                    Software category
+
+                </label>
+
+                <select id="category">
+
+                    <option value="all">
+
+                        All Categories
+
+                    </option>
+
+                    <option value="marketing">
+
+                        Digital Marketing
+
+                    </option>
+
+                    <option value="hosting">
+
+                        Web Hosting
+
+                    </option>
+
+                    <option value="seo">
+
+                        SEO Tools
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button class="outline"
+                    id="clear"
+                    type="button">
+
+                Clear Filters
+
+            </button>
+
+        </div>
+
+        <p class="muted"
+           id="count"
+           role="status">
+
+            Showing 3 of 3 tools
+
+        </p>
+
+
+        <div class="grid" id="productsGrid">
+
+
+            <!-- PRODUCT 1: SYSTEME.IO -->
+
+            <article class="product"
+                     data-category="marketing">
+
+                <div class="product-head">
+
+                    <div class="product-logo systeme"
+                         aria-hidden="true">
+
+                        S
+
+                    </div>
+
+                    <div>
+
+                        <h3>Systeme.io</h3>
+
+                        <small>Marketing Platform</small>
+
+                    </div>
+
+                </div>
+
+                <span class="tag">
+
+                    MARKETING &amp; AUTOMATION
+
+                </span>
+
+                <p>
+
+                    A platform for building sales
+                    funnels, managing email campaigns
+                    and automating online business tasks.
+
+                </p>
+
+                <ul class="features">
+
+                    <li>Email marketing</li>
+
+                    <li>Sales funnel builder</li>
+
+                    <li>Business automation</li>
+
+                    <li>Online course tools</li>
+
+                </ul>
+
+                <div class="pricing">
+
+                    <small>Pricing model</small>
+
+                    <strong>Free &amp; Paid Plans</strong>
+
+                    <a href="https://systeme.io/pricing?sa=sa02874294894c105673cfe5831c66e76abfd436dd"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Check current pricing ↗
+
+                    </a>
+
+                </div>
+
+               
+<div class="pricing">
+
+    <small>Pricing model</small>
+
+    <strong>Free &amp; Paid Plans</strong>
+
+    <a href="https://systeme.io/pricing?sa=sa02874294894c105673cfe5831c66e76abfd436dd"
+       target="_blank"
+       rel="sponsored noopener noreferrer">
+
+        Check current pricing ↗
+
+    </a>
+
+</div>
+
+
+                <details>
+
+                    <summary>
+
+                        Overview, Pros &amp; Cons
+
+                    </summary>
+
+                    <h4>Best suited for</h4>
+
+                    <p>
+
+                        Entrepreneurs who want several
+                        online marketing functions in
+                        one platform.
+
+                    </p>
+
+                    <h4>Advantages</h4>
+
+                    <ul>
+
+                        <li>Free entry-level plan.</li>
+
+                        <li>Integrated marketing tools.</li>
+
+                        <li>Multiple business functions.</li>
+
+                    </ul>
+
+                    <h4>Considerations</h4>
+
+                    <ul>
+
+                        <li>Free plans have usage limits.</li>
+
+                        <li>
+                            Check available integrations
+                            before moving your business.
+                        </li>
+
+                    </ul>
+
+                    <a href="https://systeme.io/pricing"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Official plan information
+
+                    </a>
+
+                </details>
+
+            </article>
+
+
+            <!-- PRODUCT 2: HOSTINGER -->
+
+            <article class="product"
+                     data-category="hosting">
+
+                <div class="product-head">
+
+                    <div class="product-logo hostinger"
+                         aria-hidden="true">
+
+                        H
+
+                    </div>
+
+                    <div>
+
+                        <h3>Hostinger</h3>
+
+                        <small>Website Hosting</small>
+
+                    </div>
+
+                </div>
+
+                <span class="tag">
+
+                    WEBSITE &amp; HOSTING
+
+                </span>
+
+                <p>
+
+                    Website hosting services for
+                    businesses, bloggers, developers
+                    and online projects.
+
+                </p>
+
+                <ul class="features">
+
+                    <li>Web hosting</li>
+
+                    <li>WordPress hosting options</li>
+
+                    <li>Website builder options</li>
+
+                    <li>Domain services</li>
+
+                </ul>
+
+              
+<div class="pricing">
+
+    <small>Pricing model</small>
+
+    <strong>Free &amp; Paid Plans</strong>
+
+    <a href="https://systeme.io/pricing?sa=sa02874294894c105673cfe5831c66e76abfd436dd"
+       target="_blank"
+       rel="sponsored noopener noreferrer">
+
+        Check current pricing ↗
+
+    </a>
+
+</div>
+
+
+                <div class="product-actions">
+
+                    <!-- Replace with approved affiliate URL later -->
+
+                    <a class="btn"
+                       href="https://www.hostinger.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Visit Website ↗
+
+                    </a>
+
+                </div>
+
+                <details>
+
+                    <summary>
+
+                        Overview, Pros &amp; Cons
+
+                    </summary>
+
+                    <h4>Best suited for</h4>
+
+                    <p>
+
+                        Businesses and website owners
+                        looking for managed hosting
+                        options.
+
+                    </p>
+
+                    <h4>Advantages</h4>
+
+                    <ul>
+
+                        <li>Multiple hosting options.</li>
+
+                        <li>WordPress hosting services.</li>
+
+                        <li>Website management tools.</li>
+
+                    </ul>
+
+                    <h4>Considerations</h4>
+
+                    <ul>
+
+                        <li>
+                            Promotional and renewal
+                            prices may differ.
+                        </li>
+
+                        <li>
+                            Check upfront billing
+                            and contract duration.
+                        </li>
+
+                    </ul>
+
+                    <a href="https://www.hostinger.com/pricing"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Official plan information
+
+                    </a>
+
+                </details>
+
+            </article>
+
+
+            <!-- PRODUCT 3: SEMRUSH -->
+
+            <article class="product"
+                     data-category="seo">
+
+                <div class="product-head">
+
+                    <div class="product-logo semrush"
+                         aria-hidden="true">
+
+                        S
+
+                    </div>
+
+                    <div>
+
+                        <h3>Semrush</h3>
+
+                        <small>SEO &amp; Marketing</small>
+
+                    </div>
+
+                </div>
+
+                <span class="tag">
+
+                    SEO &amp; DIGITAL MARKETING
+
+                </span>
+
+                <p>
+
+                    A digital marketing toolkit
+                    for researching keywords,
+                    analyzing competitors and
+                    monitoring website visibility.
+
+                </p>
+
+                <ul class="features">
+
+                    <li>Keyword research</li>
+
+                    <li>Competitor analysis</li>
+
+                    <li>Website audits</li>
+
+                    <li>Position tracking</li>
+
+                </ul>
+
+                <div class="pricing">
+
+                    <small>Pricing model</small>
+
+                    <strong>Limited Free &amp; Paid</strong>
+
+                    <a href="https://www.semrush.com/pricing/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Check current pricing ↗
+
+                    </a>
+
+                </div>
+
+                <div class="product-actions">
+
+                    <!-- Replace with approved affiliate URL later -->
+
+                    <a class="btn"
+                       href="https://www.semrush.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Visit Website ↗
+
+                    </a>
+
+                </div>
+
+                <details>
+
+                    <summary>
+
+                        Overview, Pros &amp; Cons
+
+                    </summary>
+
+                    <h4>Best suited for</h4>
+
+                    <p>
+
+                        Marketers and website owners
+                        researching organic search
+                        opportunities.
+
+                    </p>
+
+                    <h4>Advantages</h4>
+
+                    <ul>
+
+                        <li>Multiple SEO research tools.</li>
+
+                        <li>Competitor research features.</li>
+
+                        <li>Technical website audits.</li>
+
+                    </ul>
+
+                    <h4>Considerations</h4>
+
+                    <ul>
+
+                        <li>Paid plans can be expensive.</li>
+
+                        <li>
+                            Free access has limitations.
+                        </li>
+
+                        <li>
+                            Estimated search metrics
+                            are not guaranteed results.
+                        </li>
+
+                    </ul>
+
+                    <a href="https://www.semrush.com/pricing/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Official plan information
+
+                    </a>
+
+                </details>
+
+            </article>
+
+        </div>
+
+        <p id="empty" class="muted" hidden>
+
+            No matching software found.
+            Try another search or category.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================
+         SOFTWARE COMPARISON
+    ====================================== -->
+
+    <section id="comparison">
+
+        <div class="eyebrow">
+
+            SOFTWARE COMPARISON
+
+        </div>
+
+        <h2>Compare Before You Choose</h2>
+
+        <p class="muted">
+
+            These platforms serve different business
+            needs. Choose according to your goals.
+
+        </p>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Software</th>
+
+                        <th>Main Purpose</th>
+
+                        <th>Pricing Model</th>
+
+                        <th>Best For</th>
+
+                        <th>Official Website</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td><b>Systeme.io</b></td>
+
+                        <td>Marketing automation</td>
+
+                        <td>Free &amp; Paid</td>
+
+                        <td>Online entrepreneurs</td>
+
+                        <td>
+
+                            <a href="https://systeme.io/?sa=sa02874294894c105673cfe5831c66e76abfd436dd"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                                Visit ↗
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><b>Hostinger</b></td>
+
+                        <td>Web hosting</td>
+
+                        <td>Paid</td>
+
+                        <td>Website owners</td>
+
+                        <td>
+
+                            <a href="https://www.hostinger.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                                Visit ↗
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><b>Semrush</b></td>
+
+                        <td>SEO research</td>
+
+                        <td>Limited Free &amp; Paid</td>
+
+                        <td>Digital marketers</td>
+
+                        <td>
+
+                            <a href="https://www.semrush.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                                Visit ↗
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         LEARNING GUIDES
+    ====================================== -->
+
+    <section id="guides">
+
+        <div class="eyebrow">
+
+            FAROHUB LEARNING CENTER
+
+        </div>
+
+        <h2>Learn Before You Invest</h2>
+
+        <p class="muted">
+
+            Practical guides for choosing digital
+            tools with confidence.
+
+        </p>
+
+        <div class="grid">
+
+            <article class="guide">
+
+                <span class="glyph">✦</span>
+
+                <h3>AI Writing Assistants</h3>
+
+                <p>
+
+                    Learn how to evaluate AI tools
+                    for accuracy, cost and privacy.
+
+                </p>
+
+                <details>
+
+                    <summary>Read Guide</summary>
+
+                    <ul>
+
+                        <li>Test identical prompts.</li>
+
+                        <li>Compare usage limits.</li>
+
+                        <li>Check commercial-use rights.</li>
+
+                        <li>Verify generated information.</li>
+
+                    </ul>
+
+                </details>
+
+            </article>
+
+            <article class="guide">
+
+                <span class="glyph"
+                      style="background:#F5B69E">✉</span>
+
+                <h3>Email Marketing</h3>
+
+                <p>
+
+                    Choose an email marketing tool
+                    that matches your audience.
+
+                </p>
+
+                <details>
+
+                    <summary>Read Guide</summary>
+
+                    <ul>
+
+                        <li>Compare subscriber limits.</li>
+
+                        <li>Test signup forms.</li>
+
+                        <li>Check unsubscribe features.</li>
+
+                        <li>Use permission-based lists.</li>
+
+                    </ul>
+
+                </details>
+
+            </article>
+
+            <article class="guide">
+
+                <span class="glyph">▣</span>
+
+                <h3>Website Hosting</h3>
+
+                <p>
+
+                    Understand hosting costs,
+                    security and performance.
+
+                </p>
+
+                <details>
+
+                    <summary>Read Guide</summary>
+
+                    <ul>
+
+                        <li>Check HTTPS support.</li>
+
+                        <li>Compare renewal prices.</li>
+
+                        <li>Test mobile loading speed.</li>
+
+                        <li>Check backup options.</li>
+
+                    </ul>
+
+                </details>
+
+            </article>
+
+            <article class="guide">
+
+                <span class="glyph">◈</span>
+
+                <h3>Workflow Automation</h3>
+
+                <p>
+
+                    Reduce repetitive business
+                    tasks with appropriate tools.
+
+                </p>
+
+                <details>
+
+                    <summary>Read Guide</summary>
+
+                    <ul>
+
+                        <li>Identify repetitive tasks.</li>
+
+                        <li>Compare integration limits.</li>
+
+                        <li>Test error handling.</li>
+
+                    </ul>
+
+                </details>
+
+            </article>
+
+            <article class="guide">
+
+                <span class="glyph"
+                      style="background:#F5B69E">↗</span>
+
+                <h3>SEO Research Tools</h3>
+
+                <p>
+
+                    Learn how to identify useful
+                    search opportunities.
+
+                </p>
+
+                <details>
+
+                    <summary>Read Guide</summary>
+
+                    <ul>
+
+                        <li>Research search intent.</li>
+
+                        <li>Check keyword data coverage.</li>
+
+                        <li>Create useful original content.</li>
+
+                    </ul>
+
+                </details>
+
+            </article>
+
+            <article class="guide">
+
+                <span class="glyph">✓</span>
+
+                <h3>Project Management</h3>
+
+                <p>
+
+                    Organize your work, deadlines
+                    and collaboration.
+
+                </p>
+
+                <details>
+
+                    <summary>Read Guide</summary>
+
+                    <ul>
+
+                        <li>Test with a sample project.</li>
+
+                        <li>Check collaboration limits.</li>
+
+                        <li>Compare per-user costs.</li>
+
+                    </ul>
+
+                </details>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         OUR APPROACH
+    ====================================== -->
+
+    <section class="callout" id="method">
+
+        <div class="eyebrow">
+
+            THE FAROHUB APPROACH
+
+        </div>
+
+        <h2>
+
+            Better Decisions. Smarter Business.
+
+        </h2>
+
+        <p class="muted">
+
+            FaroHub helps readers evaluate software
+            based on its features, total cost,
+            usability and suitability for their needs.
+
+            Product overviews are based on published
+            provider information and are not claims
+            of independent hands-on testing.
+
+        </p>
+
+        <a class="btn" href="#products">
+
+            Discover Software →
+
+        </a>
+
+    </section>
+
+
+    <!-- =====================================
+         ABOUT & LEGAL INFORMATION
+    ====================================== -->
+
+    <section class="legal">
+
+        <div id="about">
+
+            <h2>About FaroHub</h2>
+
+            <p>
+
+                FaroHub is an independent software
+                discovery website dedicated to
+                helping entrepreneurs, freelancers
+                and small businesses make informed
+                technology decisions.
+
+            </p>
+
+        </div>
+
+        <div id="disclosure">
+
+            <h2>Affiliate Disclosure</h2>
+
+           
+<p class="muted">
+
+    These are research-based product overviews,
+    not hands-on reviews.
+
+    Some links are affiliate links.
+    FaroHub may earn a commission from qualifying
+    purchases at no additional cost to you.
+
+</p>
+
+
+        </div>
+
+        <div id="privacy">
+
+            <h2>Privacy Policy</h2>
+
+            <p>
+
+                This website currently uses no analytics,
+                user accounts or contact forms.
+
+                Search runs locally in your browser.
+                Theme preferences may be stored locally.
+
+                External websites have their own
+                privacy policies.
+
+                Hosting providers may process
+                technical request information.
+
+            </p>
+
+        </div>
+
+        <div id="editorial">
+
+            <h2>Editorial Policy</h2>
+
+            <p>
+
+                Our product information is based on
+                published provider documentation.
+
+                Prices and features may change.
+
+                We encourage readers to confirm
+                current terms before purchasing.
+
+                FaroHub does not guarantee business
+                income or marketing results.
+
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="wrap foot">
+
+        <div>
+
+            <strong>FaroHub</strong>
+
+            <br>
+
+            Discover Better. Choose Smarter.
+
+            <br>
+
+            © <span id="year">2026</span> FaroHub.
+
+        </div>
+
+        <div>
+
+            <a href="#about">About</a>
+
+            ·
+
+            <a href="#privacy">Privacy</a>
+
+            ·
+
+            <a href="#disclosure">Disclosure</a>
+
+            ·
+
+            <a href="#editorial">Editorial</a>
+
+            ·
+
+            <a href="#home">Back to top ↑</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     FAROHUB JAVASCRIPT ENGINE V3.0
+========================================= -->
+
+<script>
+
+'use strict';
+
+/* =========================================
+   SMART SEARCH & FILTER
+========================================= */
+
+const search =
+    document.getElementById('search');
+
+const category =
+    document.getElementById('category');
+
+const count =
+    document.getElementById('count');
+
+const empty =
+    document.getElementById('empty');
+
+const clear =
+    document.getElementById('clear');
+
+const products = Array.from(
+    document.querySelectorAll(
+        '#productsGrid .product'
+    )
+);
+
+const searchableProducts = products.map(product => ({
+
+    element: product,
+
+    category: product.dataset.category,
+
+    text: (
+        product.textContent + ' ' +
+        product.dataset.category
+    ).toLowerCase()
+
+}));
+
+
+function filterProducts() {
+
+    const query = search.value
+        .trim()
+        .toLowerCase();
+
+    const selectedCategory =
+        category.value.trim().toLowerCase() || 'all';
+
+    let visible = 0;
+
+    products.forEach(product => {
+
+        const productText =
+            product.textContent.toLowerCase();
+
+        const productCategory =
+            (product.dataset.category || '')
+            .trim()
+            .toLowerCase();
+
+        const matchSearch =
+            query === '' ||
+            query.split(/\s+/).every(
+                word => productText.includes(word)
+            );
+
+        const matchCategory =
+            selectedCategory === 'all' ||
+            selectedCategory === productCategory;
+
+        const show =
+            matchSearch && matchCategory;
+
+        product.hidden = !show;
+
+        if (show) {
+            visible++;
+        }
+
+    });
+
+    count.textContent =
+        `Showing ${visible} of ${products.length} tools`;
+
+    empty.hidden = visible !== 0;
+
+}
+
+search.addEventListener(
+
+    'input',
+
+    filterProducts
+
+);
+
+category.addEventListener(
+
+    'change',
+
+    filterProducts
+
+);
+
+clear.addEventListener('click', () => {
+
+    search.value = '';
+
+    category.value = 'all';
+
+    filterProducts();
+
+    search.focus();
+
+});
+
+filterProducts();
+
+
+/* =========================================
+   DARK & LIGHT MODE
+========================================= */
+
+const theme =
+    document.getElementById('theme');
+
+function applyTheme(dark) {
+
+    document.body.classList.toggle(
+
+        'dark',
+
+        dark
+
+    );
+
+    theme.textContent =
+
+        dark ? '☀ Light' : '☾ Dark';
+
+    theme.setAttribute(
+
+        'aria-label',
+
+        dark
+            ? 'Switch to light mode'
+            : 'Switch to dark mode'
+
+    );
+
+    document.querySelector(
+        'meta[name="theme-color"]'
+    ).content = dark ? '#192C49' : '#E9E8F8';
+
+}
+
+try {
+
+    applyTheme(
+
+        localStorage.getItem(
+            'farohub-theme-v2'
+        ) === 'dark'
+
+    );
+
+} catch {
+
+    applyTheme(false);
+
+}
+
+theme.addEventListener('click', () => {
+
+    const dark =
+
+        !document.body.classList.contains(
+            'dark'
+        );
+
+    applyTheme(dark);
+
+    try {
+
+        localStorage.setItem(
+
+            'farohub-theme-v2',
+
+            dark ? 'dark' : 'light'
+
+        );
+
+    } catch {}
+
+});
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+const menu =
+    document.getElementById('menu');
+
+const navigation =
+    document.getElementById('navigation');
+
+function closeMenu() {
+
+    navigation.classList.remove('open');
+
+    menu.setAttribute(
+
+        'aria-expanded',
+
+        'false'
+
+    );
+
+}
+
+menu.addEventListener('click', () => {
+
+    const open =
+
+        navigation.classList.toggle('open');
+
+    menu.setAttribute(
+
+        'aria-expanded',
+
+        String(open)
+
+    );
+
+});
+
+navigation.addEventListener('click', event => {
+
+    if (event.target.closest('a')) {
+
+        closeMenu();
+
+    }
+
+});
+
+document.addEventListener('keydown', event => {
+
+    if (event.key === 'Escape') {
+
+        closeMenu();
+
+    }
+
+});
+
+
+/* =========================================
+   AUTOMATIC COPYRIGHT YEAR
+========================================= */
+
+document.getElementById('year').textContent =
+
+    new Date().getFullYear();
+
+
+console.info(
+
+    'FaroHub V3.0 initialized successfully.'
+
+);
+
+</script>
+
+</body>
+</html>
